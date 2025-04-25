@@ -1,0 +1,2 @@
+# std = "neovim"
+std = "lua" # FIXME: This actually breaks selene. Trying to fix goto statements being parsing errors is something I don't want to do right now.
