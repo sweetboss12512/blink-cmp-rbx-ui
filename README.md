@@ -22,3 +22,17 @@ return {
     },
 }
 ```
+
+You can change the completions for certain datatypes:
+```lua
+opts = {
+    complete_snippets = {
+        enabled = true, -- Enable/disable snippets for datatypes
+        completions = {
+            UDim2 = "UDim2.fromScale($0)",
+            Color3 = "Color3.fromRGB($0)",
+            CFrame = "", -- Disable completion for specific datatype
+        },
+    },
+}
+```

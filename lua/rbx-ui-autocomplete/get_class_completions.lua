@@ -55,9 +55,9 @@ local function get_class_completions(class)
         end
 
         local type_text =
-            config.current.complete_datatypes[member.ValueType and member.ValueType.Name or member.MemberType]
+            config.current.complete_snippets.completions[member.ValueType and member.ValueType.Name or member.MemberType]
 
-        if type_text then
+        if type_text and type_text ~= "" and config.current.complete_snippets.enabled then
             type_text = type_text .. ","
         else
             type_text = ""
