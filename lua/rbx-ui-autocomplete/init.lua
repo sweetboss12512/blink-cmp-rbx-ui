@@ -60,7 +60,7 @@ local function is_in_creator()
         end
     end
 
-    return true
+    return false
 end
 
 local instance_names = {} ---@type blink.cmp.CompletionItem[]
