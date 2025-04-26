@@ -1,4 +1,5 @@
 local curl = require("plenary.curl") -- I have no idea how to use this!
+local async = require("plenary.async") -- I **really** have no idea how to use this!
 local json = require("rbx-ui-autocomplete.json")
 
 local API_DOCS_URL = "https://raw.githubusercontent.com/MaximumADHD/Roblox-Client-Tracker/roblox/api-docs/en-us.json"
@@ -21,7 +22,7 @@ local function storage_file(key)
     return vim.fs.joinpath(path, key)
 end
 
-local download_api = function()
+local download_api = async.wrap(function()
     curl.get(API_DUMP_URL, {
         output = storage_file(DOCS_FILE),
         on_error = function()
@@ -35,7 +36,7 @@ local download_api = function()
             print("Failed to request api-dump.json")
         end,
     })
-end
+end, 1)
 
 coroutine.resume(coroutine.create(download_api))
 
