@@ -1,3 +1,8 @@
+# Roblox UI Autocomplete
+Provides completions for Vide/Fusion constructors.
+
+https://github.com/user-attachments/assets/3167e5ce-e849-46a6-9e7c-202eb0af9769
+
 ## Installation
 
 With Lazy:
