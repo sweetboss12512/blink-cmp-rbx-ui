@@ -5,7 +5,7 @@ local roblox = require("rbx-ui-autocomplete.roblox")
 local ignore_tags = {
     "ReadOnly",
     "Hidden",
-    "Depreacted",
+    "Deprecated",
 }
 local include_member_types = {
     "Property",
