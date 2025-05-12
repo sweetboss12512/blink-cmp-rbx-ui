@@ -63,7 +63,7 @@ local function get_class_completions(class)
             type_text = ""
         end
 
-        if member.ValueType and member.ValueType.Category == "Enum" then
+        if member.ValueType and member.ValueType.Category == "Enum" and config.current.complete_snippets.enums then
             type_text = "Enum." .. member.ValueType.Name .. "."
         end
 

@@ -8,6 +8,7 @@ local defaults = {
     },
     complete_snippets = {
         enabled = true,
+        enums = true,
         ---@type string[]
         completions = {
             CFrame = "CFrame.new($0)",
